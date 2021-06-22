@@ -1,6 +1,10 @@
-
+/* 
+ * Feito por: Pedro Augusto - 3DS
+ * 
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* import font Saira COndensed */
 @font-face
@@ -44,7 +48,7 @@ header
     top: 0;
     position: fixed;
     width: 100%;
-    background: #161623;
+    background: #111;
     margin: 0 auto;
     padding: 10px;
     border-top: 0;
@@ -259,6 +263,7 @@ nav ul li a:hover
     outline: none;
     overflow: hidden;
     border-radius: 20px;
+    text-decoration: none;
 }
 
 .btn-menu-2
@@ -465,16 +470,78 @@ nav ul li a:hover
     opacity: 1;
     transform: scale(1);
 }
-#form-content{
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-    text-align: center;
+
+#project-content{
+    background: #0f0f19;
     min-height: 100vh;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    text-align: center;
 }
+
+#project-content .content-read{
+   overflow: hidden;
+   position: relative; 
+   width: 100%;
+   height: 221px;
+   color: #fff;
+}
+
+#project-content .content-read.active{
+   height: auto;
+}
+#project-content .content-read.active::before{
+   display: none;
+}
+
+
+#project-content .content-read::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, #0f0f19);
+}
+
+
+#project-content .content-read .title{
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    padding-top: 100px;
+}
+
+#project-content .content-read .title > span{
+    color: var(--blue);
+ }
+ 
+
+#project-content .content-read .about-care-union{
+   margin:20px;
+   letter-spacing: 2px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 100;
+   text-align: start;
+}
+
+#project-content .content-read .about-care-union > span{
+    color: var(--blue);
+    font-weight: bold;
+}
+
+#project-content .read-more{
+    position: relative; 
+    padding: 10px 15px;
+    margin: 50px 0;
+    background: var(--green);
+    color: #fff; 
+    display: inline-block;
+}
+
+
 
 @media (max-width: 1200px){
     header{

@@ -6,5 +6,6 @@
     exit;
 
     #Heroku doesn't suport a HTML and CSS App.
+    #Deploy
 
 ?>
